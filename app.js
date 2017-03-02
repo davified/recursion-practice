@@ -12,7 +12,7 @@ var Recursion = {
     return Math.abs(x)
   },
 
-  range: function(x,y) {
+  range: function (x, y) {
     if (x <= y) {
       rangeArray.push(x)
       return Recursion.range(x + 1, y)
@@ -20,9 +20,9 @@ var Recursion = {
     return rangeArray
   },
 
-  sum: function(array) {
+  sum: function (array) {
     var sum = 0
-    array.forEach(function(element) {
+    array.forEach(function (element) {
       sum += element
     })
     return sum
@@ -42,25 +42,8 @@ var Recursion = {
         return Recursion.isPalindrome(middle)
       }
     }
-  },
-
-  reverse: function (input) {
-    if (input.length === 2) {
-      lastChars = input[input.length - 1]
-      return lastChars.concat(input[input.length - 2])
-    }
-    else if (input.length > 2) {
-      lastChars = input.concat(input[input.length - 2])
-      remainingChars = input.substr(0, input.length - 1)
-      console.log(lastChars);
-      // console.log(remainingChars);
-      return Recursion.reverse(remainingChars)
-    }
   }
 }
-
-// console.log(Recursion.reverse('ab'));
-console.log(Recursion.reverse('abcde'));
 
 var rangeArray = []
 module.exports = Recursion

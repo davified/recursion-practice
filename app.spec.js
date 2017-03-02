@@ -1,5 +1,4 @@
 /* global it describe */
-
 var expect = require('chai').expect
 var assert = require('assert')
 var Recursion = require('./app')
@@ -75,16 +74,5 @@ describe('isPalindrome', () => {
 
   it('should return true', () => {
     assert.equal(true, Recursion.isPalindrome('tacocat'))
-  })
-})
-
-// Write a recursive function called reverse that accepts a string and returns a reversed string.
-describe('a recursive function called reverse that accepts a string and returns a reversed string.', () => {
-  it('should return ba', () => {
-    assert.equal('ba', Recursion.reverse('ab'))
-  })
-
-  it('should return cba', () => {
-    assert.equal('cba', Recursion.reverse('abc'))
   })
 })
